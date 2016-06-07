@@ -32,6 +32,8 @@ gem 'responders', '~> 2.0'
 gem 'angular_rails_csrf'
 #Enable features such as static asset serving and logging on Heroku
 gem 'rails_12factor', group: :production
+#Specify ruby version
+ruby "2.3.1"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
