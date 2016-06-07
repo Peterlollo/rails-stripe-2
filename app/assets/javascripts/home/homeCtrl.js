@@ -4,10 +4,13 @@ angular.module('railsStripe2')
   $scope.user = {};
   function getUsers() {
     return $http.get('/users.json')
-                .success(function(data){
-                  console.log('Users Data: ', data);
+                .then(function(users) {
+                  console.log('All Users: ', users.data);
+                }, function(err) {
+                  console.error('Error retrieving users: ', err);
                 });
   }
+  getUsers();
 
   $scope.createUser = function(user) {
     console.log('user to be created: ', user);
@@ -18,12 +21,4 @@ angular.module('railsStripe2')
                   console.error('Error creating user: ', err);
                 });
   }
-
-  $scope.obj = {
-   'one': 1,
-   'two': 2,
-   'users': []
-  };
-
-
 }]);
