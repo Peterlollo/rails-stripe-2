@@ -1,2 +1,9 @@
 <h2>Home Partial</h2>
+<form ng-submit="createUser(user)">
+  <input type="text" ng-model="user.name"></input>
+  <input type="email" ng-model="user.email"></input>
+  <button type="submit">Create User</button>
+</form>
+{{user.name}}
+{{user.email}}
 <div ng-repeat="item in obj">{{item}}</div>
