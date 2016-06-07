@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160607183047) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "payments", force: :cascade do |t|
     t.string   "token"
     t.integer  "user_id"
@@ -20,7 +23,7 @@ ActiveRecord::Schema.define(version: 20160607183047) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "payments", ["user_id"], name: "index_payments_on_user_id"
+  add_index "payments", ["user_id"], name: "index_payments_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

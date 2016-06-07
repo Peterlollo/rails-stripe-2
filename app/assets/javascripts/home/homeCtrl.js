@@ -16,7 +16,7 @@ angular.module('railsStripe2')
     console.log('user to be created: ', user);
     return $http.post('/users.json', JSON.stringify(user))
                 .then(function(data) {
-                  $scope.obj['users'].push(data);
+                  console.log('User created: ', data);
                 }, function(err) {
                   console.error('Error creating user: ', err);
                 });
