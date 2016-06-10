@@ -10,6 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require shared
+//= require friend
 //= require angular
 //= require angular-rails-templates
 //= require angular-route
